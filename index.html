@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fibratec Piscinas - Qualidade e Inovação</title>
-    <!-- Bootstrap 5 CSS (CDN) -->
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons (opcional, para ícones) -->
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Google Fonts (para um toque mais profissional) -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
-        /* Estilos personalizados para aproximar do visual do site referência */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #ffffff;
@@ -19,7 +18,7 @@
         }
 
         .navbar-custom {
-            background-color: #0b2b4f; /* azul escuro característico */
+            background-color: #0b2b4f;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
@@ -200,6 +199,16 @@
             font-size: 0.9rem;
         }
 
+        .info-rodape {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #cbd5e1;
+        }
+
+        .info-rodape strong {
+            color: #ffffff;
+        }
+
         .politica-privacidade {
             color: #94a3b8;
             text-decoration: underline;
@@ -210,7 +219,15 @@
             color: #f9b82c;
         }
 
-        /* Responsividade */
+        .badge-cnpj {
+            background-color: rgba(249, 184, 44, 0.15);
+            color: #f9b82c;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 40px;
+            border: 1px solid rgba(249, 184, 44, 0.3);
+        }
+
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2.4rem;
@@ -234,7 +251,7 @@
         <a class="navbar-brand" href="#">
             <i class="bi bi-droplet-fill me-2" style="color: #f9b82c;"></i>Fibratec Piscinas
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -256,8 +273,10 @@
     <div class="container">
         <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <span class="badge bg-warning text-dark mb-3 py-2 px-3 rounded-pill"><i class="bi bi-star-fill me-1"></i> Qualidade há 10 anos</span>
-                <h1 class="hero-title">Piscinas de Fibra<br>com <span style="color: #f9b82c;">excelência</span> e design</h1>
+                <span class="badge bg-warning text-dark mb-3 py-2 px-3 rounded-pill">
+                    <i class="bi bi-star-fill me-1"></i> Qualidade há 2 anos
+                </span>
+                <h1 class="hero-title">Piscinas de Fibra<br><span style="color: #f9b82c;">excelência</span> e design</h1>
                 <p class="hero-subtitle mt-3">Soluções completas em piscinas de fibra de vidro, com durabilidade, beleza e tecnologia para você e sua família.</p>
                 <div class="mt-4 d-flex flex-wrap gap-3">
                     <a href="#servicos" class="btn btn-primary-custom">Conheça nossos serviços</a>
@@ -269,13 +288,13 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Piscina de fibra" class="img-fluid-hero" style="border-radius: 24px;">
+                <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Piscina de fibra" class="img-fluid-hero">
             </div>
         </div>
     </div>
 </section>
 
-<!-- SERVIÇOS / FEATURES -->
+<!-- SERVIÇOS -->
 <section id="servicos" class="py-5">
     <div class="container">
         <div class="text-center mb-5">
@@ -322,7 +341,7 @@
                     <p class="mt-3 fst-italic">"A Fibratec transformou meu quintal em um paraíso. Profissionais incríveis e resultado impecável!"</p>
                     <div class="d-flex align-items-center mt-3">
                         <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente" width="48" height="48" class="rounded-circle me-2">
-                        <div><strong>Ana C.</strong><br><span class="text-muted small">São Paulo, SP</span></div>
+                        <div><strong>Ana C.</strong><br><span class="text-muted small">Itapema, SC</span></div>
                     </div>
                 </div>
             </div>
@@ -332,7 +351,7 @@
                     <p class="mt-3 fst-italic">"Qualidade superior e atendimento diferenciado. Minha piscina ficou linda e a manutenção é muito simples."</p>
                     <div class="d-flex align-items-center mt-3">
                         <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente" width="48" height="48" class="rounded-circle me-2">
-                        <div><strong>Roberto M.</strong><br><span class="text-muted small">Campinas, SP</span></div>
+                        <div><strong>Roberto M.</strong><br><span class="text-muted small">Balneário Camboriú, SC</span></div>
                     </div>
                 </div>
             </div>
@@ -342,7 +361,7 @@
                     <p class="mt-3 fst-italic">"Recomendo a Fibratec de olhos fechados. Pontualidade, limpeza e um produto final de alto padrão."</p>
                     <div class="d-flex align-items-center mt-3">
                         <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Cliente" width="48" height="48" class="rounded-circle me-2">
-                        <div><strong>Juliana R.</strong><br><span class="text-muted small">Ribeirão Preto, SP</span></div>
+                        <div><strong>Juliana R.</strong><br><span class="text-muted small">Itajaí, SC</span></div>
                     </div>
                 </div>
             </div>
@@ -350,7 +369,7 @@
     </div>
 </section>
 
-<!-- CONTATO / CHAMADA FINAL -->
+<!-- CONTATO -->
 <section id="contato" class="py-5">
     <div class="container">
         <div class="row align-items-center g-4">
@@ -358,9 +377,9 @@
                 <h2 class="section-title" style="font-size: 2.2rem;">Vamos construir a piscina dos seus sonhos?</h2>
                 <p class="text-muted">Entre em contato e receba um orçamento personalizado sem compromisso.</p>
                 <ul class="list-unstyled mt-4">
-                    <li class="mb-2"><i class="bi bi-whatsapp text-success me-2"></i> (11) 99999-9999</li>
-                    <li class="mb-2"><i class="bi bi-envelope me-2"></i> contato@fibratecpiscinas.com.br</li>
-                    <li><i class="bi bi-geo-alt me-2"></i> São Paulo - SP, Brasil</li>
+                    <li class="mb-2"><i class="bi bi-whatsapp text-success me-2"></i> (47) 99195-3070</li>
+                    <li class="mb-2"><i class="bi bi-envelope me-2"></i> eugenio.koehler@gmail.com</li>
+                    <li><i class="bi bi-geo-alt me-2"></i> Rua 220, 290 - Apt 303, Meia Praia, Itapema - SC</li>
                 </ul>
             </div>
             <div class="col-lg-6">
@@ -384,11 +403,11 @@
     </div>
 </section>
 
-<!-- RODAPÉ COM CNPJ E POLÍTICA DE PRIVACIDADE -->
+<!-- RODAPÉ COM TODAS AS INFORMAÇÕES DO CNPJ -->
 <footer class="footer-custom">
     <div class="container">
         <div class="row g-4">
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <h5><i class="bi bi-droplet-fill me-2" style="color: #f9b82c;"></i>Fibratec Piscinas</h5>
                 <p class="text-secondary" style="font-size: 0.95rem;">Qualidade e inovação em piscinas de fibra. Transformando espaços e criando momentos únicos.</p>
                 <div class="social-icons">
@@ -397,26 +416,53 @@
                     <a href="#"><i class="bi bi-youtube"></i></a>
                 </div>
             </div>
-            <div class="col-md-4">
-                <h5>Links rápidos</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#depoimentos">Depoimentos</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
+            
+            <div class="col-lg-4">
+                <h5>Dados Cadastrais</h5>
+                <div class="info-rodape">
+                    <p class="mb-1"><strong>CNPJ:</strong> 52.253.509/0001-40</p>
+                    <p class="mb-1"><strong>Razão Social:</strong> Eugenio Valdir Koehler</p>
+                    <p class="mb-1"><strong>Nome Fantasia:</strong> Fibratec Piscinas</p>
+                    <p class="mb-1"><strong>Data Abertura:</strong> 20/09/2023</p>
+                    <p class="mb-1"><strong>Porte:</strong> MEI</p>
+                    <p class="mb-1"><strong>Natureza Jurídica:</strong> Empresário Individual</p>
+                    <p class="mb-1"><strong>Capital Social:</strong> R$ 2.000,00</p>
+                    <p class="mb-1"><strong>Situação:</strong> <span class="text-success">Ativa</span></p>
+                    <p class="mb-0"><strong>Opção Simples:</strong> Sim (20/09/2023)</p>
+                </div>
             </div>
-            <div class="col-md-4">
-                <h5>Informações legais</h5>
-                <p class="mb-1"><strong>CNPJ:</strong> 52.253.509/0001-40</p>
-                <p class="mb-1"><strong>Responsável:</strong> Fibratec Comércio e Serviços Ltda.</p>
-                <!-- Política de Privacidade como link (abre modal ou página) -->
-                <a href="#" class="politica-privacidade" data-bs-toggle="modal" data-bs-target="#politicaModal">Política de Privacidade</a>
-                <p class="mt-2 small text-secondary">© 2026 Fibratec Piscinas. Todos os direitos reservados.</p>
+            
+            <div class="col-lg-4">
+                <h5>Contato e Localização</h5>
+                <div class="info-rodape">
+                    <p class="mb-1"><strong>E-mail:</strong> eugenio.koehler@gmail.com</p>
+                    <p class="mb-1"><strong>Telefone:</strong> (47) 99195-3070</p>
+                    <p class="mb-1"><strong>WhatsApp:</strong> (47) 99195-3070</p>
+                    <p class="mb-0 mt-2"><strong>Endereço:</strong></p>
+                    <p class="mb-0">Rua 220, 290 - Apt 303</p>
+                    <p class="mb-0">Bairro Meia Praia</p>
+                    <p class="mb-0">Itapema - SC, CEP: 88220-000</p>
+                </div>
+                <div class="mt-2">
+                    <span class="badge-cnpj"><i class="bi bi-check-circle-fill me-1"></i> MEI Ativo</span>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom text-center text-secondary">
-            <span>Fibratec Piscinas - CNPJ: 52.253.509/0001-40</span>
+        
+        <!-- LINHA COM POLÍTICA DE PRIVACIDADE -->
+        <div class="footer-bottom text-center">
+            <div class="d-flex flex-wrap justify-content-center gap-3 mb-2">
+                <span>© 2026 Fibratec Piscinas</span>
+                <span>|</span>
+                <span>CNPJ: 52.253.509/0001-40</span>
+                <span>|</span>
+                <a href="#" class="politica-privacidade" data-bs-toggle="modal" data-bs-target="#politicaModal">
+                    <i class="bi bi-shield-lock me-1"></i>Política de Privacidade
+                </a>
+            </div>
+            <div class="text-secondary" style="font-size: 0.75rem;">
+                Rua 220, 290 - Apt 303, Meia Praia - Itapema/SC - CEP: 88220-000
+            </div>
         </div>
     </div>
 </footer>
@@ -429,21 +475,34 @@
                 <h1 class="modal-title fs-5" id="politicaModalLabel">Política de Privacidade</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
             </div>
-            <div class="modal-body" style="font-size: 0.95rem; line-height: 1.6;">
+            <div class="modal-body" style="font-size: 0.95rem; line-height: 1.7;">
                 <p><strong>Fibratec Piscinas</strong> – CNPJ: 52.253.509/0001-40</p>
+                <p><strong>Responsável:</strong> Eugenio Valdir Koehler</p>
                 <p>A sua privacidade é importante para nós. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos as informações pessoais fornecidas pelos usuários em nosso site.</p>
+                
                 <h6 class="mt-3">1. Coleta de informações</h6>
                 <p>Coletamos informações pessoais como nome, e-mail, telefone e mensagens quando você preenche formulários de contato ou solicita orçamentos. Também podemos coletar dados de navegação por meio de cookies para melhorar sua experiência.</p>
+                
                 <h6>2. Uso das informações</h6>
                 <p>As informações são usadas para responder às suas solicitações, enviar comunicações relacionadas aos nossos serviços e melhorar nosso atendimento. Não compartilhamos seus dados com terceiros sem seu consentimento, exceto quando exigido por lei.</p>
+                
                 <h6>3. Cookies</h6>
                 <p>Utilizamos cookies para personalizar conteúdo e anúncios, fornecer recursos de mídia social e analisar nosso tráfego. Você pode gerenciar suas preferências de cookies nas configurações do seu navegador.</p>
+                
                 <h6>4. Segurança</h6>
                 <p>Adotamos medidas técnicas e organizacionais adequadas para proteger seus dados contra acesso não autorizado, alteração ou destruição.</p>
+                
                 <h6>5. Seus direitos</h6>
-                <p>Você pode solicitar a correção, atualização ou exclusão de seus dados pessoais a qualquer momento, entrando em contato conosco.</p>
-                <p><strong>Data de vigência:</strong> Esta política entra em vigor a partir de 21/07/2026.</p>
-                <p class="text-muted">Para mais informações, entre em contato pelo e-mail: privacidade@fibratecpiscinas.com.br</p>
+                <p>Você pode solicitar a correção, atualização ou exclusão de seus dados pessoais a qualquer momento, entrando em contato conosco pelos canais informados no rodapé.</p>
+                
+                <h6>6. Dados do Controlador</h6>
+                <p><strong>Eugenio Valdir Koehler</strong><br>
+                Rua 220, 290 - Apt 303, Meia Praia, Itapema/SC<br>
+                E-mail: eugenio.koehler@gmail.com<br>
+                Telefone: (47) 99195-3070</p>
+                
+                <p><strong>Data de vigência:</strong> 21/07/2026</p>
+                <p class="text-muted">Esta política pode ser atualizada periodicamente. Recomendamos revisá-la regularmente.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -452,7 +511,7 @@
     </div>
 </div>
 
-<!-- Bootstrap 5 JS (CDN) -->
+<!-- Bootstrap 5 JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
