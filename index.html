@@ -1,1 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibratec Piscinas - Qualidade e Inovação</title>
+    <!-- Bootstrap 5 CSS (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons (opcional, para ícones) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts (para um toque mais profissional) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos personalizados para aproximar do visual do site referência */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1e293b;
+        }
 
+        .navbar-custom {
+            background-color: #0b2b4f; /* azul escuro característico */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .navbar-custom .navbar-brand {
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+
+        .navbar-custom .nav-link {
+            color: rgba(255,255,255,0.85);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .navbar-custom .nav-link:hover {
+            color: #ffffff;
+        }
+
+        .btn-primary-custom {
+            background-color: #f9b82c;
+            border: none;
+            color: #0b2b4f;
+            font-weight: 600;
+            padding: 10px 28px;
+            border-radius: 40px;
+            transition: 0.3s;
+        }
+
+        .btn-primary-custom:hover {
+            background-color: #e0a31e;
+            color: #0b2b4f;
+            transform: scale(1.02);
+        }
+
+        .btn-outline-custom {
+            border: 2px solid #f9b82c;
+            color: #f9b82c;
+            border-radius: 40px;
+            padding: 10px 28px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-outline-custom:hover {
+            background-color: #f9b82c;
+            color: #0b2b4f;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #eef5ff 0%, #d9e6f5 100%);
+            padding: 80px 0 60px;
+        }
+
+        .hero-title {
+            font-weight: 700;
+            font-size: 3.2rem;
+            line-height: 1.2;
+            color: #0b2b4f;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #334155;
+            max-width: 500px;
+        }
+
+        .img-fluid-hero {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px -12px rgba(0,0,0,0.2);
+        }
+
+        .section-title {
+            font-weight: 700;
+            color: #0b2b4f;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 60px;
+            height: 4px;
+            background-color: #f9b82c;
+            border-radius: 4px;
+        }
+
+        .card-feature {
+            border: none;
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 1.5rem 1rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+            height: 100%;
+            text-align: center;
+        }
+
+        .card-feature:hover {
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+            transform: translateY(-4px);
+        }
+
+        .card-feature .icon {
+            font-size: 2.8rem;
+            color: #f9b82c;
+            margin-bottom: 1rem;
+        }
+
+        .card-feature h5 {
+            font-weight: 600;
+            color: #0b2b4f;
+        }
+
+        .depoimento-card {
+            background: #f8fafc;
+            border-radius: 24px;
+            padding: 2rem;
+            border-left: 6px solid #f9b82c;
+        }
+
+        .depoimento-card i {
+            color: #f9b82c;
+            font-size: 1.8rem;
+        }
+
+        .footer-custom {
+            background-color: #0b2b4f;
+            color: #e2e8f0;
+            padding-top: 3rem;
+            padding-bottom: 1.5rem;
+        }
+
+        .footer-custom h5 {
+            color: #ffffff;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+        }
+
+        .footer-custom a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-custom a:hover {
+            color: #f9b82c;
+        }
+
+        .footer-custom .social-icons a {
+            display: inline-block;
+            background: rgba(255,255,255,0.08);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            color: #e2e8f0;
+            transition: 0.3s;
+        }
+
+        .footer-custom .social-icons a:hover {
+            background: #f9b82c;
+            color: #0b2b4f;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .politica-privacidade {
+            color: #94a3b8;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .politica-privacidade:hover {
+            color: #f9b82c;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.4rem;
+            }
+            .hero-section {
+                padding: 50px 0 30px;
+                text-align: center;
+            }
+            .hero-subtitle {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-custom py-3">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <i class="bi bi-droplet-fill me-2" style="color: #f9b82c;"></i>Fibratec Piscinas
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+                <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+            </ul>
+            <div class="ms-3 d-none d-lg-block">
+                <a href="#contato" class="btn btn-primary-custom btn-sm">Orçamento <i class="bi bi-whatsapp ms-1"></i></a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section" id="sobre">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="badge bg-warning text-dark mb-3 py-2 px-3 rounded-pill"><i class="bi bi-star-fill me-1"></i> Qualidade há 10 anos</span>
+                <h1 class="hero-title">Piscinas de Fibra<br>com <span style="color: #f9b82c;">excelência</span> e design</h1>
+                <p class="hero-subtitle mt-3">Soluções completas em piscinas de fibra de vidro, com durabilidade, beleza e tecnologia para você e sua família.</p>
+                <div class="mt-4 d-flex flex-wrap gap-3">
+                    <a href="#servicos" class="btn btn-primary-custom">Conheça nossos serviços</a>
+                    <a href="#contato" class="btn btn-outline-custom">Fale conosco</a>
+                </div>
+                <div class="mt-4 d-flex align-items-center gap-4">
+                    <div><i class="bi bi-check-circle-fill text-warning me-1"></i> Instalação rápida</div>
+                    <div><i class="bi bi-check-circle-fill text-warning me-1"></i> Garantia estendida</div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Piscina de fibra" class="img-fluid-hero" style="border-radius: 24px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVIÇOS / FEATURES -->
+<section id="servicos" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">Nossos diferenciais</h2>
+            <p class="text-muted">Tecnologia e cuidado em cada detalhe para a sua piscina perfeita.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card-feature">
+                    <div class="icon"><i class="bi bi-shield-check"></i></div>
+                    <h5>Resistência e Durabilidade</h5>
+                    <p class="text-muted">Matéria-prima de alta qualidade, garantindo vida útil prolongada e baixa manutenção.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-feature">
+                    <div class="icon"><i class="bi bi-palette"></i></div>
+                    <h5>Design Personalizado</h5>
+                    <p class="text-muted">Formatos e cores exclusivas para se adequar ao seu espaço e estilo.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-feature">
+                    <div class="icon"><i class="bi bi-clock-history"></i></div>
+                    <h5>Instalação Ágil</h5>
+                    <p class="text-muted">Equipe especializada que garante montagem rápida e sem transtornos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos" class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title">O que nossos clientes dizem</h2>
+            <p class="text-muted">Experiências reais de quem confia na Fibratec.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="depoimento-card">
+                    <i class="bi bi-chat-quote-fill"></i>
+                    <p class="mt-3 fst-italic">"A Fibratec transformou meu quintal em um paraíso. Profissionais incríveis e resultado impecável!"</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente" width="48" height="48" class="rounded-circle me-2">
+                        <div><strong>Ana C.</strong><br><span class="text-muted small">São Paulo, SP</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="depoimento-card">
+                    <i class="bi bi-chat-quote-fill"></i>
+                    <p class="mt-3 fst-italic">"Qualidade superior e atendimento diferenciado. Minha piscina ficou linda e a manutenção é muito simples."</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente" width="48" height="48" class="rounded-circle me-2">
+                        <div><strong>Roberto M.</strong><br><span class="text-muted small">Campinas, SP</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="depoimento-card">
+                    <i class="bi bi-chat-quote-fill"></i>
+                    <p class="mt-3 fst-italic">"Recomendo a Fibratec de olhos fechados. Pontualidade, limpeza e um produto final de alto padrão."</p>
+                    <div class="d-flex align-items-center mt-3">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Cliente" width="48" height="48" class="rounded-circle me-2">
+                        <div><strong>Juliana R.</strong><br><span class="text-muted small">Ribeirão Preto, SP</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTATO / CHAMADA FINAL -->
+<section id="contato" class="py-5">
+    <div class="container">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-6">
+                <h2 class="section-title" style="font-size: 2.2rem;">Vamos construir a piscina dos seus sonhos?</h2>
+                <p class="text-muted">Entre em contato e receba um orçamento personalizado sem compromisso.</p>
+                <ul class="list-unstyled mt-4">
+                    <li class="mb-2"><i class="bi bi-whatsapp text-success me-2"></i> (11) 99999-9999</li>
+                    <li class="mb-2"><i class="bi bi-envelope me-2"></i> contato@fibratecpiscinas.com.br</li>
+                    <li><i class="bi bi-geo-alt me-2"></i> São Paulo - SP, Brasil</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-light p-4 p-md-5 rounded-4 shadow-sm">
+                    <h5 class="fw-bold mb-3">Solicite seu orçamento</h5>
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" placeholder="Seu nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control form-control-lg" placeholder="Melhor e-mail" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="3" placeholder="Mensagem..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary-custom w-100">Enviar <i class="bi bi-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- RODAPÉ COM CNPJ E POLÍTICA DE PRIVACIDADE -->
+<footer class="footer-custom">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <h5><i class="bi bi-droplet-fill me-2" style="color: #f9b82c;"></i>Fibratec Piscinas</h5>
+                <p class="text-secondary" style="font-size: 0.95rem;">Qualidade e inovação em piscinas de fibra. Transformando espaços e criando momentos únicos.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h5>Links rápidos</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Informações legais</h5>
+                <p class="mb-1"><strong>CNPJ:</strong> 52.253.509/0001-40</p>
+                <p class="mb-1"><strong>Responsável:</strong> Fibratec Comércio e Serviços Ltda.</p>
+                <!-- Política de Privacidade como link (abre modal ou página) -->
+                <a href="#" class="politica-privacidade" data-bs-toggle="modal" data-bs-target="#politicaModal">Política de Privacidade</a>
+                <p class="mt-2 small text-secondary">© 2026 Fibratec Piscinas. Todos os direitos reservados.</p>
+            </div>
+        </div>
+        <div class="footer-bottom text-center text-secondary">
+            <span>Fibratec Piscinas - CNPJ: 52.253.509/0001-40</span>
+        </div>
+    </div>
+</footer>
+
+<!-- MODAL POLÍTICA DE PRIVACIDADE -->
+<div class="modal fade" id="politicaModal" tabindex="-1" aria-labelledby="politicaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="politicaModalLabel">Política de Privacidade</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body" style="font-size: 0.95rem; line-height: 1.6;">
+                <p><strong>Fibratec Piscinas</strong> – CNPJ: 52.253.509/0001-40</p>
+                <p>A sua privacidade é importante para nós. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos as informações pessoais fornecidas pelos usuários em nosso site.</p>
+                <h6 class="mt-3">1. Coleta de informações</h6>
+                <p>Coletamos informações pessoais como nome, e-mail, telefone e mensagens quando você preenche formulários de contato ou solicita orçamentos. Também podemos coletar dados de navegação por meio de cookies para melhorar sua experiência.</p>
+                <h6>2. Uso das informações</h6>
+                <p>As informações são usadas para responder às suas solicitações, enviar comunicações relacionadas aos nossos serviços e melhorar nosso atendimento. Não compartilhamos seus dados com terceiros sem seu consentimento, exceto quando exigido por lei.</p>
+                <h6>3. Cookies</h6>
+                <p>Utilizamos cookies para personalizar conteúdo e anúncios, fornecer recursos de mídia social e analisar nosso tráfego. Você pode gerenciar suas preferências de cookies nas configurações do seu navegador.</p>
+                <h6>4. Segurança</h6>
+                <p>Adotamos medidas técnicas e organizacionais adequadas para proteger seus dados contra acesso não autorizado, alteração ou destruição.</p>
+                <h6>5. Seus direitos</h6>
+                <p>Você pode solicitar a correção, atualização ou exclusão de seus dados pessoais a qualquer momento, entrando em contato conosco.</p>
+                <p><strong>Data de vigência:</strong> Esta política entra em vigor a partir de 21/07/2026.</p>
+                <p class="text-muted">Para mais informações, entre em contato pelo e-mail: privacidade@fibratecpiscinas.com.br</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap 5 JS (CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
